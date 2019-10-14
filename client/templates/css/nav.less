@@ -1,0 +1,144 @@
+.nav {
+    background-color: #273c75;
+    height: 100vh;
+    width: @nav-width;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+
+    padding-top: 50px;
+    color: white;
+
+    display:flex;
+    flex-flow: column;
+    justify-content: flex-start;
+
+    .hamburger {
+        display: none;
+        width: 100px;
+        height: 100px;
+    }
+
+    .nav-hamburger {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: @z-touchable;
+    }
+
+
+    .author-image {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+
+        padding: 30px;
+
+        img {
+            width: 115px;
+            height: 115px;
+
+            border-radius: 50%;
+        }
+
+    }
+
+    .main-menu{
+
+
+        .nav-list {
+            list-style: none;
+            padding: 20px;
+            text-align: center;
+
+            padding-top: 100px;
+
+            li {
+                padding: 10px 10px;
+
+                // &:hover {
+                //     padding-top: 20px;
+                //     padding-bottom: 20px;
+                // }
+
+
+            }
+        }
+
+        .social-list {
+            text-align: center;
+            list-style: none;
+
+            padding: 50px 0px;
+
+            li {
+                font-size: 1.5em;
+                padding: 5px;
+                img {
+                    display: none;
+                }
+            }
+        }
+
+
+        .qr_img {
+            display: none;
+        }
+    }
+
+    .nav-content {
+        padding: 30px;
+    }
+
+
+
+
+    .footer-link {
+        text-align: center;
+        font-size: 0.8em;
+        line-height: 2em;
+
+        color: @dimmed_text
+    }
+
+    .source-link {
+        text-align: center;
+        padding: 10px 0px 10px 0px;
+        a {
+            font-size: 0.8em;
+        }
+
+        p {
+            text-align: center;
+            padding: 20px;
+            font-size: .8em;
+        }
+
+        i {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+    }
+
+    .copy-right {
+        text-align: center;
+        font-size: 0.8em;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+
+        &:hover {
+            color: #3498db;
+        }
+    }
+}
+
+.photo {
+    height: 100px;
+}

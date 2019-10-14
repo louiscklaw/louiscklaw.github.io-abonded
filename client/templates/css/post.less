@@ -1,0 +1,142 @@
+.post-container {
+    width: 100%;
+
+    background-color: @post-background;
+
+
+    .header {
+        width: 100%;
+        font-size: 2em;
+    }
+
+    .post-content {
+        padding: 5% 10%;
+
+
+        .proj_back_button {
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+        }
+
+        .copy_link_button {
+            width: 80px;
+            height: 80px;
+
+            align-items: center;
+        }
+    }
+
+    .title {
+
+        padding: 0px;
+
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .meta {
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+
+        span {
+            vertical-align: middle;
+        }
+
+        i {
+            width: 40px;
+            height: 40px;
+        }
+
+        .proj-date {
+            padding: 5px;
+
+            background-color: yellow;
+        }
+
+
+        .proj-tag {
+            background-color: grey;
+
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
+
+            .fa-tags {
+                background-color: yellow;
+            }
+
+            ul {
+                width: 20px;
+                background-color: white;
+
+                li {
+                    text-align: top;
+                    display: inline;
+                }
+            }
+        }
+
+        .proj-time-to-read {
+            // background-color: red;
+        }
+
+        .meta-content {
+
+            // display: flex;
+            // flex-flow: row;
+            // justify-content: flex-start;
+
+            vertical-align: center;
+        }
+
+        .meta-tags {
+            display: inline;
+
+            li {
+                list-style: none;
+            }
+        }
+
+    }
+
+    .footer {
+        height: 20px;
+        background-color: #d35400;
+    }
+
+    .caption_img {
+        text-align: center;
+        img {
+            max-width: 100%;
+            padding-bottom: 0px;
+        }
+
+        p {
+            padding-top: 0px;
+            text-align: center;
+            color: @img_caption;
+            font-style: italic;
+            text-decoration: underline;
+        }
+    }
+
+    h1,h2,h3,h4,h5,h6{
+        padding-bottom: 0px;
+        padding-top: 20px;
+    }
+
+    p {
+        padding-top: 1px;
+    }
+
+
+    * {
+        padding: 10px;
+    }
+
+}

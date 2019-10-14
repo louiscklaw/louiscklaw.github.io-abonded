@@ -1,0 +1,65 @@
+include ./mixins.pug
+
+.post-container(class="flexflow-top-down")
+    .post-content
+        +post-header('z transfer demo', 'z-transfer-demo')
+        +hello_post-meta
+        +caption_img("assets/proj_thumbnails/transfer-sh.png","appium beahve relation")
+
+        h3 What is this ?
+        p transfer.sh is a simple file sharing service. Users can simply share files by uploading files to their web site. This simple script can go a step further by compress files with password and upload it to transfer.sh and grab the link return from transfer.sh by using a single command.
+
+        h3 requirement:
+        ul
+            li ubuntu
+            li python
+            li pwgen
+            li curl
+            li p7zip-full
+
+
+        h3 How to install:
+        ul
+            li install pwgen pip3 install pwgen
+            li open ~/.bashrc or ~/.zshrc
+            li paste the following source into it
+            li logout from linux -> login
+            li done
+
+        h3 Source
+        +gist_link("f9a49076aff09449a5e5e0078b30ce65")
+        pre
+            code.language-py
+                |ztransfer () {
+                |    python $argv[0] -c '\
+                |    import sys, subprocess, hashlib;\
+                |    BLOCKSIZE = 65536;\
+                |    hasher = hashlib.sha1();\
+                |    sTarget = sys.argv[1];\
+                |    sTarget7z = "%s.7z" % sTarget;\
+                |    from pwgen import pwgen;\
+                |    sUnzipPassword=pwgen(50, 1, symbols=False, capitalize=False);\
+                |    cmdCompress = ["7z", "a", sTarget7z, sTarget, "-mx9","-p%s" % sUnzipPassword];\
+                |    cmdUploadCurl = ["curl", "--upload-file","./%s" % sTarget7z, "https://transfer.sh/%s" % sTarget7z];\
+                |    subprocess.check_output(cmdCompress, stderr=subprocess.STDOUT);\
+                |    sShareLink = subprocess.check_output(cmdUploadCurl);\
+                |    print "-"*80;\
+                |    print "unzip password       : %s" % sUnzipPassword;\
+                |    print "ShareLink            : %s" % sShareLink;\
+                |    print "curl command         : curl -LO %s" % sShareLink;\
+                |    print "mac extract command  : 7z e %s" % sTarget7z ;\
+                |    print "linux extract command: 7za e ./%s -p%s" % (sTarget7z, sUnzipPassword) ;\
+                |    print "-"*80;\
+                |    ' $argv[1]
+                |}
+
+        h3 How to use?
+        ul
+            li ztransfer <file_you_want_to_send>
+            li it return a link with transfer.sh
+
+        +back_to_project_home
+
+
+    //- .footer
+    //-     p test footer

@@ -1,0 +1,56 @@
+.nav
+    .nav-hamburger
+        button(class="hamburger hamburger--arrowalt " type="button" onclick="process_menu();")
+            span(class="hamburger-box")
+                span(class="hamburger-inner")
+
+    .nav-content(class='flexflow-top-down')
+        .greeting-plate Hi, I'm louis 👋
+
+    .nav-img-row
+        .author-image
+            img(src="assets/avatar.jpeg")
+
+    .main-menu
+        ul(class="nav-list")
+            li
+                +page_link("about", "#about")
+            li
+                +page_link("projects", "#proj_home")
+            li
+                +page_link("logs", "#log")
+
+        .menu-bottom
+            ul(class="social-list")
+                li
+                    +fa_icon_link("fab fa-facebook", "https://www.facebook.com/louiscklaw")
+                    +img_link("https://img.icons8.com/nolan/64/000000/facebook-new.png", "www.facebook.com")
+                li
+                    +fa_icon_link("fab fa-github", "https://github.com/louiscklaw")
+                    +img_link("https://img.icons8.com/nolan/64/000000/github.png", "www.facebook.com")
+
+                li(class="hide-in-mobile")
+                    +fa_icon_link("fab fa-keybase", "https://keybase.io/louiscklaw")
+                li
+                    +fa_icon_link("fab fa-linkedin", "https://www.linkedin.com/in/louiscklaw")
+                    +img_link("https://img.icons8.com/nolan/64/000000/linkedin.png", "www.facebook.com")
+
+                li(class="hide-in-mobile")
+                    +fa_icon_link("fab fa-slack", "https://louislabs.slack.com")
+
+                li
+                    +fa_icon_link("fab fa-telegram", "https://t.me/louislabs")
+                    +img_link("https://img.icons8.com/nolan/64/000000/telegram-app.png", "www.facebook.com")
+
+
+            .qr_img
+                img(src="assets/qr_img.png", alt="https://louiscklaw.github.io/portfolio/")
+
+    .footer-link ❤️ coded by louiscklaw.<br>Built on the solder of and <br>
+        +page_link("these giants", "#credits")
+
+    .source-link
+        p
+            <a href="//github.com/louiscklaw/portfolio" target="_blank">source code here<i class="fas fa-external-link-alt"></i></a>
+
+    .copy-right 2019 louiscklaw

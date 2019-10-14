@@ -1,0 +1,22 @@
+include ./mixins.pug
+
+.post-container(class="flexflow-top-down")
+    .post-content
+        +post-header('youtube split view', '#youtube-split-view-tryout')
+        +hello_post-meta
+        +caption_img("assets/proj_thumbnails/youtube_split_view_tryout.png","youtube/mpv split view")
+
+        h3 Purpose
+        p a simple page to monitor stock, while data provided by tradingview
+
+        h3 Demo
+        +lazy_page_link("https://louiscklaw.github.io/youtube-split-view-tryout/")
+
+        h3 ref/repo:
+        +lazy_page_link("https://github.com/louiscklaw/youtube-split-view-tryout")
+
+
+        +back_to_project_home
+
+    //- .footer
+    //-     p test footer

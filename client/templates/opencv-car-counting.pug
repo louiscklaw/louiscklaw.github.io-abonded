@@ -1,0 +1,25 @@
+include ./mixins.pug
+
+.post-container(class="flexflow-top-down")
+    .post-content
+        +post-header('opencv car counting', '#opencv-car-counting')
+        +hello_post-meta
+        +caption_img("assets/proj_thumbnails/opencv-car-counting.jpg","opencv car counting")
+
+        h3 Purpose / description:
+        p
+            | To count the number of cars passing by images only.
+            | This project is craeted on top of the another github works work.
+
+        +youtube_link("https://www.youtube.com/embed/8P3VEGvMeTQ")
+
+        h3 Requirement :
+        ul
+            li python
+            li docker
+            li linux
+
+        h3 repository :
+        +lazy_page_link("https://github.com/louiscklaw/car_tracking_tryout")
+
+        +back_to_project_home

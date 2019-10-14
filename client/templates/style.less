@@ -1,0 +1,292 @@
+@import "./css/helloworld.less";
+@import "./css/config.less";
+
+@import "./css/nav.less";
+@import "./css/share-button.less";
+@import "./css/projects.less";
+@import "./css/tooltip.less";
+@import "./css/pages.less";
+@import "./css/about.less";
+@import "./css/post.less";
+@import "./css/proj_home.less";
+@import "./css/hamburger.less";
+
+
+// spacing
+@nav-width: 300px;
+@container-width: calc(100vw - @nav-width);
+
+// colors
+@nav_background: #273c75;
+@nav_background_deep: #16213f;
+@normal_text: #ecf0f1;
+@dimmed_text: #95a5a6;
+
+@default_text_color: #EEEEEE;
+@post-background: #ecf0f1;
+
+@img_caption: rgba(16, 16, 16, 1);
+
+@content_highlighted: #95a5a6;
+@content_font: #2c3e50;
+@content_background: rgba(255, 255, 255, 0.85);
+
+
+// system
+@z-touchable: 9;
+
+// transition
+
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.greeting-plate {
+    height: 100px;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+
+.photo {
+    height: 100px;
+}
+
+
+.author-image {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+
+    padding: 30px;
+
+    img {
+        width: 115px;
+        height: 115px;
+
+        border-radius: 50%;
+    }
+
+}
+
+
+.nav-list {
+    list-style: none;
+    padding: 20px;
+
+    text-align: center;
+
+    li {
+        padding-top: 10px;
+
+        &:hover {
+            padding-top: 13px;
+            padding-bottom: 13px;
+        }
+    }
+
+}
+
+
+.social-list {
+    text-align: center;
+    list-style: none;
+    /* padding: 20px; */
+
+    padding: 50px 0px 50px 0px;
+
+    li {
+        font-size: 1.5em;
+        display: inline-block;
+        padding: 5px;
+    }
+}
+
+.flexflow-top-down {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+.flexflow-left-right {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.content {
+    color: @content_font;
+    background-color: @content_background;
+
+    height: 100vh;
+    width: calc(100vw - 300px);
+
+    // display: flex;
+    // flex-flow: row;
+    // flex-wrap: wrap;
+
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(auto-fit, minmax( calc(100% / 4) , 1fr));
+
+    position: absolute;
+    left: 300px;
+
+    .proj_a {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+}
+
+.footer-link {
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 2em;
+
+}
+
+
+.source-link {
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+
+    a {
+        font-size: 0.8em;
+    }
+
+    p {
+        text-align: center;
+        padding: 20px;
+        font-size: .8em;
+    }
+
+    i {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+}
+
+.copy-right {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+// #cell1, #cell1,#cell1,#cell1,#cell1,#cell1,#cell1,#cell1,#cell1, {
+//     background-image: url('../img/proj1.png');
+// }
+
+each(range(16), {
+        #cell@{value} {
+            @base-url: %("https://via.placeholder.com/400x400.png?text=proj%d", @value);
+            background-image: url(@base-url);
+        }
+    }
+
+);
+
+.back_to_proj_home {
+    display: block;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.post-body {
+    padding: 50px;
+}
+
+
+.lang_link {
+    i {
+        padding: 2px;
+    }
+
+    a {
+        padding: 3px;
+    }
+}
+
+.check_screen_width {
+    background-color: #000001;
+    width: 1px;
+    height: 1px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-list {
+    width: 100%;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+
+}
+
+.gist_link {
+    font-size: 0.8em;
+}
+
+button {
+    outline: none;
+    background: none;
+    border: none;
+}
+
+p {
+    line-height: 1.8;
+    text-align: justify;
+
+    span {
+        letter-spacing: 0px;
+    }
+}
+
+a {
+    color: @content_font;
+    font-weight: 700;
+
+    &:hover {
+        color: @content_highlighted;
+    }
+}
+
+
+body {
+    background-color: #192a56;
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+
+    transition: all 0.3s ease-in-out;
+}
+
+@import "./css/mobile.less";

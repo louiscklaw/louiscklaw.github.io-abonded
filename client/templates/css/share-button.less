@@ -1,0 +1,110 @@
+@import "./config.less";
+@share_button_img_path: 'assets/share-button';
+
+.s-button {
+    width: 70px;
+    height: 70px;
+
+    background-size: 70px 70px;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    z-index: 1;
+
+    position: absolute;
+    top: 350px;
+    left: 350px;
+
+    visibility: hidden;
+    opacity: 0;
+
+    img {
+        width: 60px;
+        height: 60px;
+    }
+
+}
+
+
+
+.s-button1 {
+    background-image: url("../assets/share-button/whatsapp.svg");
+}
+
+.s-button2 {
+    background-image: url("../assets/share-button/facebook.svg");
+}
+
+.s-button3 {
+    background-image: url("../assets/share-button/linkedin.svg");
+}
+
+.s-button4 {
+    background-image: url("../assets/share-button/github.svg");
+}
+
+.s-button5 {
+    background-image: url("../assets/share-button/pinterest.svg");
+}
+
+.s-button6 {
+    background-image: url("../assets/share-button/qr-code.png");
+}
+
+@share_button_num: 6;
+@share_button_list: range(2, @share_button_num - 1);
+
+@share_button_angle: calc(90deg/4);
+@share_button_angle_neg: calc(-90deg/4);
+
+@share_button_distance: -250px;
+@share_button_distance_toggle: -150px;
+
+
+.share-area:hover {
+    .s-button1 {
+        transform: rotate(0deg) translateX(@share_button_distance) rotate(-0deg);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    each(@share_button_list, {
+            .s-button@{value} {
+                transform: rotate(calc((90deg / (@share_button_num - 1)) * (@value - 1))) translateX(if((mod(@value, 2)>0), @share_button_distance, @share_button_distance_toggle)) rotate(calc((-90deg / (@share_button_num - 1)) * (@value - 1)));
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+    );
+
+    .s-button@{share_button_num} {
+        transform: rotate(90deg) translateX(@share_button_distance_toggle) rotate(-90deg);
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+
+.share-container {
+    width: 500px;
+    height: 500px;
+
+    position: absolute;
+    top: calc(100vh - 500px);
+    left: calc(100vw - 500px);
+}
+
+.main-button1 {
+    background-image: url("../assets/share-button/speech-bubble.svg");
+    width: 70px;
+    height: 70px;
+
+    position: relative;
+    top: 350px;
+    left: 350px;
+
+}

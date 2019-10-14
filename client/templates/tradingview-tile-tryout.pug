@@ -1,0 +1,22 @@
+include ./mixins.pug
+
+.post-container(class="flexflow-top-down")
+    .post-content
+        +post-header('tradingview tile page', '#tradingview-tile-tryout')
+        +hello_post-meta
+        +caption_img("https://raw.githubusercontent.com/louiscklaw/tradingview-tile-tryout/master/src/img/sc.png","tradingview dashboard screenshot")
+
+        h3 Purpose
+        p a simple page to monitor stock, while data provided by tradingview
+
+        h3 Demo
+        +lazy_page_link("https://louiscklaw.github.io/tradingview-tile-tryout")
+
+        h3 ref/repo:
+        +lazy_page_link("https://github.com/louiscklaw/tradingview-tile-tryout")
+
+
+        +back_to_project_home
+
+    //- .footer
+    //-     p test footer

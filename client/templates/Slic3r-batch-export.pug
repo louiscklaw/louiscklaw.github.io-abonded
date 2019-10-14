@@ -1,0 +1,38 @@
+include ./mixins.pug
+
+.post-container(class="flexflow-top-down")
+    .post-content
+        +post-header('Slic3r batch export', '#Slic3r-batch-export')
+        +hello_post-meta
+        +caption_img("assets/proj_thumbnails/slic3r-batch-export.png","Slic3r batch export")
+
+        h3 What is it ?
+        p An easy tool to export gcode from slic3r
+
+        h3 background
+        p The option of slic3r command linx options wasn’t availabe under linux as described. The tools written to help perorming export 3mf -> save to stl -> export gcode as a batch operation.
+
+        h3 How to use:
+        ul
+            li Clone repo:
+            li run under linux
+            li git clone git@github.com:louiscklaw/slic3r_batch_export.git
+            li pip install libxdo
+            li update the file list in:
+            ul
+                li file_3mf_list # for the list of 3mf files
+                li WORKSPACE_DIR and PROJ_HOME
+                li SLIC3R_ACTIVE_CONFIG for slic3r configuration wanted
+                li SLIC3R_BIN_PATH for slic3r binary
+            li python batch_slic3r.py
+
+        h3 How it works:
+        +youtube_link("https://www.youtube.com/embed/5_bTsrpKEy0")
+
+        h3 Repoistory:
+        +lazy_page_link("https://github.com/louiscklaw/slic3r_batch_export")
+
+        +back_to_project_home
+
+    //- .footer
+    //-     p test footer

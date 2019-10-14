@@ -1,0 +1,48 @@
+include ./mixins.pug
+
+.post-container(class="flexflow-top-down")
+    .post-content
+        +post-header('Allwinner v3s tryout', '#Slic3r-batch-export')
+        +hello_post-meta
+        +caption_img("assets/proj_thumbnails/allwinner-v3s-tryout.jpg","Allwinner v3s tryout")
+
+        h3 What is it ?
+        p this is a tryout of homemake embedded linux project using allwinner v3s chips inspired by
+            +lazy_page_link("https://www.reddit.com/r/electronics/comments/83141t/i_made_an_allwinner_v3s_evaluation_board_based/")
+
+        h3 progress
+        p currently in progress, with the 2nd try the first try
+            +lazy_page_link("https://github.com/louiscklaw/allwinner-v3s-tryout/tree/20181118-print-1")
+
+        ul
+            li the first try {% img [1st try hardware] /images/IMG_20181219_003601.800.jpg [800] %}
+            li the second try CHANGE LOG:
+            ul
+                li fix SVREF wire
+                li 4k7 on SDIO CLK wire
+                li fix power facilities
+                li add GL827L sdcard reading facilities
+                li add ATMega328p for power and reset control
+                li add USB to serial {% img [1st try hardware] /images/IMG_20181219_003601.800.jpg [800] %}
+
+        h3 buildroot:
+        ul
+            li to setup ubuntu/docker for buildroot(tested under 18.04)
+            li sudo apt-get install iputils-ping vim git wget xz-utils bzip2 gcc device-tree-compiler python python-dev time make pkg-config
+
+        h3 references:
+        ul
+            li
+                +page_link("allwinner-v3s-tryout", "https://github.com/louiscklaw/allwinner-v3s-tryout")
+            li
+                +page_link("I made an Allwinner V3s evaluation board (based loosely on LicheePi)", "https://www.reddit.com/r/electronics/comments/83141t/i_made_an_allwinner_v3s_evaluation_board_based/")
+            li
+                +page_link("test", "https://simonrichards.com/v3s/")
+
+        h3 BOM/Part list:
+        p to be updated
+
+        +back_to_project_home
+
+    //- .footer
+    //-     p test footer

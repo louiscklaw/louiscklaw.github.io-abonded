@@ -1,0 +1,31 @@
+include mixins.pug
+
+doctype html
+html(lang='en')
+    head
+        link(rel="shortcut icon" href="assets/favicon.png" type="image/x-icon")
+        include inc/meta.pug
+
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat&display=swap")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css")
+
+        link(href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-okaidia.css" rel="stylesheet")
+
+        link(rel="stylesheet", href="css/style.css")
+
+        title test prism
+    body
+        h1 helloworld
+
+        .container
+            include ./inc/nav.pug
+
+            .content(style="overflow-x: hidden;")
+                pre
+                    code(class="language-css") p { color: red }
+
+
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js")
+
+        script(src="js/app.js")

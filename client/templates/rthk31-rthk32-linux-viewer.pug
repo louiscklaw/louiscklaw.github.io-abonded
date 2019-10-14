@@ -1,0 +1,79 @@
+include ./mixins.pug
+
+.post-container(class="flexflow-top-down")
+    .post-content
+        +post-header('rthk31 rthk32 linux viewer', '#rthk31-rthk32-linux-viewer')
+        +hello_post-meta
+        +caption_img("assets/proj_thumbnails/rthk31-rthk32-linux-viewer.png","video play screen capture")
+
+        h3 What is this ?
+        p
+            | To connect to the world while you’re working in linux environment at home……
+            a(href="https://blog.wtako.net/view/23") Inspired by Linux桌面環境下收看ViuTV
+
+        h3 Requirement:
+        ul
+            li linux, gnome
+            li python3, curl, gnome-mpv
+
+        h3 How to install:
+        ul
+            li install pwgen pip3 install pwgen
+            li open ~/.bashrc or ~/.zshrc
+            li paste the following source into it
+            li logout from linux -> login
+            li done
+
+        h3 Source
+        +gist_link("f9a49076aff09449a5e5e0078b30ce65")
+        pre
+            code.language-shell
+                | # RTHK31
+                | rthk31 () {
+                |         link=$(curl -s -L https://www.rthk.hk/feeds/dtt/rthktv31_https.m3u8 | python2 -c 'import sys; list=sys.stdin.readlines();  print list[list.index("#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2180000,RESOLUTION=1280x720,CODECS=\"avc1.66.30, mp4a.40.2\""\n")+1]')  && mpv $link &
+                | }
+                |
+                | # RTHK32
+                | rthk32 () {
+                |         link=$(curl -s -L https://www.rthk.hk/feeds/dtt/rthktv31_https.m3u8 | python2 -c 'import sys; list=sys.stdin.readlines();  print list[list.index("#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2148000,RESOLUTION=1280x720,CODECS=\"avc1.66.30, mp4a.40.2\"\n")+1]')  && mpv $link &
+                | }
+
+        h3 Demo:
+        +youtube_link("https://www.youtube.com/embed/hJdwEo4QNx8")
+
+        h3 updated 2019-07-28
+        h4 to watch twitch under linux
+        ul
+            li install:
+            li pip3 install streamlink
+            li to use:
+            li streamlink --player mpv https://www.twitch.tv/shinjishinji1 720p
+
+        h4 to watch youtube under linux
+        ul
+            li install:
+            li pip3 install install youtube-dl mps-youtube==0.2.7
+            li to use:
+
+        pre
+            code.language-shell
+                | $ mpsyt
+                | > set show_video true
+                | > exit
+                | $ mpsyt playurl https://www.youtube.com/watch?v=wcnBl6gNIhQ
+
+        h4 ViuTV
+        pre
+            code.language-shell
+                | mpv http://viutv99-i.akamaihd.net/hls/live/265284/live1/stream4/streamPlaylist.m3u8 mpv http://viutv99-i.akamaihd.net/hls/live/265284/live1/master.m3u8
+
+        h4 CableTV
+        pre
+            code.language-shell
+                | mpv http://media.fantv.hk/m3u8/archive/channel2.m3u8
+
+        +back_to_project_home
+
+
+    //- .footer
+    //-     p test footer

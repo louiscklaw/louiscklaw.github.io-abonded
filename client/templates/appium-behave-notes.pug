@@ -1,0 +1,116 @@
+include ./mixins.pug
+
+.post-container(class="flexflow-top-down")
+    .post-content
+        +post-header('appium behave tryout', '#appium-behave-tryout')
+        +hello_post-meta
+        +caption_img("assets/appium-behave/appium-behave.png","appium beahve relation")
+
+        h3 Purpose
+        p to test mobile apps of hk observatory
+
+        h4 environment:
+        ul
+            li linux
+            li appium
+            li python 3.6.1, behave, python-appium-client
+
+        h3 to setup:
+        +code_shell("$ pip install -r requirements.txt")
+
+        h3 to execute:
+        h4 setup virtual environment
+        +code_shell("$ virtualenv venv")
+        +code_shell("$ source venv/bin/activate")
+        h4 install python libraries
+        +code_shell("$ pip install -r requirements.txt")
+        h4 start appium -> connect to android / genymotion appium
+
+        +code_shell("$ python behave")
+        +code_shell("$ behave ./features/HKOApp_9DayForecast.feature")
+
+        h3 Demo
+        h4 passing sample
+        +youtube_link("https://www.youtube.com/embed/Ce-v1zTHhwU")
+
+        h4 failing sample
+        +youtube_link("https://www.youtube.com/embed/uR8VLSwvf9Q")
+
+        h3 system structure
+        div.language-viz-dot
+            |digraph activation_flow {
+            |  rankdir=TD;
+            |  node [shape=rectangle]
+            |  nOperator [label="operator / jenkins"]
+            |  nBehave [label="behave,.steps files"]
+            |  nPython [label="python, android_function.py handy_logger.py "]
+            |  nAppium [label="appium"]
+            |  nADB [label="ADB"]
+            |  nAVD [label="AVD ／ Genymotion"]
+            |  nAndroid [label="Android"]
+            |
+            |  nOperator -> nBehave [label="  lang = gherkin"]
+            |  nBehave -> nPython
+            |  nPython -> nAppium
+            |  nAppium -> nAVD
+            |  nADB -> nAVD
+            |
+            |  subgraph{
+            |    nAppium -> nADB
+            |    nADB -> nAndroid
+            |  }
+            |}
+
+        h3 Behave grammer
+        div.language-viz-dot
+            | digraph{
+            |     rankdir=LR
+            |     node
+            |     [label ="???"] [shape = rectangle];
+            |     ActStart [label = "start"] [shape = circle] [color=blue style=bold]
+            |     ActEnd [label = "end"] [shape = circle] [color=blue style=bold]
+            |     size="8,5"
+            |
+            |     ActStart->textPass;
+            |     ActStart->textFail;
+            |     ActStart->textWait;
+            |
+            |     textPass [label="pass"]
+            |     textFail [label="Fail"]
+            |     textWait [label="Wait"]
+            |
+            |     testPurpose [label="my test purpose"] [shape=square]
+            |
+            |     textPass -> testPurpose;
+            |     textFail -> testPurpose;
+            |     textWait -> testPurpose;
+            |
+            |     testPurpose -> ActEnd;
+            |
+            | }
+
+        h3 stack on MAC machine:
+        pre
+            code.language-shell
+                | brew cask install visual-studio-code
+                | brew install zsh-history-substring-search
+                | brew install zsh
+                | brew install zsh-lovers
+                | brew install zsh-autosuggestions
+                | brew install zsh-navigation-tools
+                | brew install zsh-completions
+                | brew install zsh-syntax-highlighting
+                | brew install zsh-git-prompt
+                | brew install zshdb
+                | brew install git-flow
+
+
+        h3 ref/repo:
+        +lazy_page_link("https://github.com/louiscklaw/behave_tryout")
+
+
+        +back_to_project_home
+
+
+    //- .footer
+    //-     p test footer

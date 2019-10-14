@@ -1,0 +1,42 @@
+.cell {
+    background-size: cover;
+    background-color: #2980b9;
+    width: 100%;
+    height: calc(100vh / 4);
+
+    .cell_container {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .proj_thumbnail_title {
+        // background-color: red;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        color: black;
+        position: relative;
+        top: -40px;
+        font-size: 1.1em;
+    }
+
+    &:hover {
+        .proj_thumbnail_title {
+            opacity: 1;
+            visibility: visible;
+
+            color: black;
+        }
+
+        .proj_a {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    .hash-copy-button {
+        cursor: pointer;
+    }
+
+}

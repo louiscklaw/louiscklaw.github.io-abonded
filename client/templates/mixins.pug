@@ -1,0 +1,167 @@
+
+mixin proj_thumbnail_title(text)
+    .proj_thumbnail_title
+        span= text
+
+mixin helloworld
+    p helloworld
+
+
+mixin caption_img(img_link, caption)
+    .caption_img
+        img(src= img_link)
+        p= caption
+
+mixin fa_icon_python
+    .lang_link
+        a(href="http://www.python.org", target="_blank", class="") <i class="fab fa-python"></i><i class="fas fa-external-link-alt"></i>python
+
+mixin icons8_icon_github
+    .lang_link
+        a(href="http://www.github.com", target="_blank", class="") <i class="fab fa-github"></i><i class="fas fa-external-link-alt"></i>github.com
+
+
+mixin lazy_page_link(text)
+    a(href= text, target="_blank", class="")= text
+        <i class="fas fa-external-link-alt"></i>
+
+mixin page_link_new_window(text, hash)
+    a(href= hash, target="_blank")= text
+
+mixin page_link(text, hash)
+    a(href= hash onclick="hide_menu();")= text
+
+mixin fa_icon_link(fa_icon, fa_dest_href)
+    a(href= fa_dest_href, target="_blank", style="font-weight: normal;")
+        i(class= fa_icon)
+
+mixin copy_link_button(text_to_copy)
+    button(class="btn hash-copy-button", data-clipboard-text= 'http://louiscklaw.github.io/index.html'+text_to_copy, onclick="alert('copied');")
+        <i class="fas fa-copy"></i>
+
+mixin back_button
+    .back_button
+        a(href="#proj_home") <i class="fas fa-backward"></i>
+
+
+mixin hello_post-header
+    .header(class="flexflow-left-right")
+        +back_button
+        .title()
+            div Rich Content 123321
+        +copy_link_button
+
+
+mixin post-header(title, hash_link)
+    .header(class="flexflow-left-right" id= hash_link)
+        +back_button
+        .title()
+            div= title
+
+mixin hello_post-meta
+    .meta
+        .meta-content
+            span <i class="fas fa-calendar-alt"></i> Mar 9, 2019
+
+        .meta-tags
+            span <i class="fas fa-tags"></i> tag1 tag2 tag3
+
+        .meta-content
+            span <i class="fas fa-clock"></i> 2 min
+
+mixin hello_description
+    .description
+        p Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+
+        p Hugo makes use of a variety of open source projects including:
+
+        ul
+            li
+                a(href="https://github.com/russross/blackfriday") https://github.com/russross/blackfriday
+            li
+                a(href="https://github.com/alecthomas/chroma") https://github.com/alecthomas/chroma
+            li
+                a(href="https://github.com/muesli/smartcrop") https://github.com/muesli/smartcrop
+            li
+                a(href="https://github.com/spf13/cobra") https://github.com/spf13/cobra
+            li
+                a(href="https://github.com/spf13/viper") https://github.com/spf13/viper
+
+        p Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+
+        p Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+
+        p Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+
+        p Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+
+        p Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+
+        p Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+
+        p Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+
+        p Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+
+        p Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+
+        p Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+
+        p Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+
+        p Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+
+        p Learn more and contribute on GitHub.
+
+mixin img_link(img_src, link_href)
+    a(href= link_href)
+        img(src= img_src)
+
+mixin bottom-right-share-button
+    .
+        <div class="share-area">
+            <div class="share-container">
+                <div class="main-button1"></div>
+                <div class="s-button s-button1"></div>
+                <div class="s-button s-button2"></div>
+                <div class="s-button s-button3"></div>
+                <div class="s-button s-button4"></div>
+                <div class="s-button s-button5"></div>
+                <div class="s-button s-button6"></div>
+            </div>
+        </div>
+
+mixin back_to_project_home
+    a(class="back_to_proj_home" href="#proj_home" style="width: 100%;")
+        <i class="fa fa-arrow-left"></i> back to project home
+
+mixin youtube_link(text_link)
+    .video-container
+        iframe(width="853" height="480" src= text_link frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+mixin code_css(code_text)
+    pre
+        code.language-css= code_text
+
+mixin code_py(code_text)
+    pre
+        code.language-py
+            = code_text
+
+mixin code_shell(code_text)
+    pre
+        code.language-shell= code_text
+
+mixin gist(gist_uri)
+    div(class="gist" data-uri= gist_uri)
+
+mixin gist_py(gist_uri)
+    pre
+        code.language-py
+            +gist(gist_uri)
+
+mixin gist_link(gist_id)
+    a(class="gist_link" href= "https://gist.github.com/louiscklaw/"+ gist_id) gist link to source
+
+mixin viz_graph
+    div.language-viz-dot

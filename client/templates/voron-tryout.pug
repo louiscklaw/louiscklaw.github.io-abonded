@@ -1,0 +1,22 @@
+include ./mixins.pug
+
+.post-container(class="flexflow-top-down")
+    .post-content
+        +post-header('voron printer', '#voron-tryout')
+        +hello_post-meta
+        +caption_img("assets/voron-tryout/IMG_20190325_115322.jpg","voron printer frame")
+
+        h3 Purpose
+        p to build a opensource 3d printer named voron
+
+        h3 Demo
+        +youtube_link("https://www.youtube.com/embed/YNCB23V38x0")
+
+        h3 ref/repo:
+        +lazy_page_link("https://www.reddit.com/r/voroncorexy/")
+
+
+        +back_to_project_home
+
+    //- .footer
+    //-     p test footer
