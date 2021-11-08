@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>shortcodes on louis&#39;s portfolio</title>
+    <link>https://louiscklaw.github.io/tags/shortcodes/</link>
+    <description>Recent content in shortcodes on louis&#39;s portfolio</description>
+    <image>
+      <url>https://repository-images.githubusercontent.com/215005095/c6e27c30-641c-401c-b31a-86c2e50afcdf</url>
+      <link>https://repository-images.githubusercontent.com/215005095/c6e27c30-641c-401c-b31a-86c2e50afcdf</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://louiscklaw.github.io/tags/shortcodes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Allwinner v3s tryout</title>
+      <link>https://louiscklaw.github.io/projects/allwinnerv3stryout/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://louiscklaw.github.io/projects/allwinnerv3stryout/</guid>
+      <description>A brief description of Hugo Shortcodes</description>
+    </item>
+    
+    <item>
+      <title>hk data search board</title>
+      <link>https://louiscklaw.github.io/projects/hkdata/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://louiscklaw.github.io/projects/hkdata/</guid>
+      <description>A brief description of Hugo Shortcodes</description>
+    </item>
+    
+    <item>
+      <title>hk data search board</title>
+      <link>https://louiscklaw.github.io/projects/hkoweatherbot/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://louiscklaw.github.io/projects/hkoweatherbot/</guid>
+      <description>A brief description of Hugo Shortcodes</description>
+    </item>
+    
+    <item>
+      <title>my linux toolbox</title>
+      <link>https://louiscklaw.github.io/projects/linuxtoolbox/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://louiscklaw.github.io/projects/linuxtoolbox/</guid>
+      <description>A brief description of Hugo Shortcodes</description>
+    </item>
+    
+    <item>
+      <title>appium behave notes</title>
+      <link>https://louiscklaw.github.io/projects/appiumbehavenotes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://louiscklaw.github.io/projects/appiumbehavenotes/</guid>
+      <description>A brief description of Hugo Shortcodes</description>
+    </item>
+    
+    <item>
+      <title>opencv car counting tryout</title>
+      <link>https://louiscklaw.github.io/projects/opencvcarcounting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://louiscklaw.github.io/projects/opencvcarcounting/</guid>
+      <description>A brief description of Hugo Shortcodes</description>
+    </item>
+    
+    <item>
+      <title>opencv car counting tryout</title>
+      <link>https://louiscklaw.github.io/projects/petpugproject/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://louiscklaw.github.io/projects/petpugproject/</guid>
+      <description>A brief description of Hugo Shortcodes</description>
+    </item>
+    
+    <item>
+      <title>printer board tryout</title>
+      <link>https://louiscklaw.github.io/projects/printerboard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://louiscklaw.github.io/projects/printerboard/</guid>
+      <description>A brief description of Hugo Shortcodes</description>
+    </item>
+    
+    <item>
+      <title>rthk31 rthk32 linux viewer</title>
+      <link>https://louiscklaw.github.io/projects/rthk31rthk32linuxviewer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://louiscklaw.github.io/projects/rthk31rthk32linuxviewer/</guid>
+      <description>A brief description of Hugo Shortcodes</description>
+    </item>
+    
+    <item>
+      <title>slic3r tryout</title>
+      <link>https://louiscklaw.github.io/projects/slic3rbatchexport/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://louiscklaw.github.io/projects/slic3rbatchexport/</guid>
+      <description>A brief description of Hugo Shortcodes</description>
+    </item>
+    
+    <item>
+      <title>tappy tryout</title>
+      <link>https://louiscklaw.github.io/projects/tappy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://louiscklaw.github.io/projects/tappy/</guid>
+      <description>A brief description of Hugo Shortcodes</description>
+    </item>
+    
+    <item>
+      <title>voron tryout</title>
+      <link>https://louiscklaw.github.io/projects/vorontryout/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://louiscklaw.github.io/projects/vorontryout/</guid>
+      <description>A brief description of Hugo Shortcodes</description>
+    </item>
+    
+  </channel>
+</rss>
